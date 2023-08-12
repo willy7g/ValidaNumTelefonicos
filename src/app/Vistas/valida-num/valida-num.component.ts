@@ -16,12 +16,18 @@ export class ValidaNumComponent implements OnInit {
     
     if (+primeroDosNumeros == 30 || +primeroDosNumeros==31 ||+primeroDosNumeros==40 ) {
       this.message = 'TIGO';
-    } else {
-      this.message = 'Los dos primeros números son mayores o iguales a 100.';
+    } else if(+primeroDosNumeros==41){
+      
+      this.message = 'CLARO';
+    }else{
+      this.message = 'no encontramos tu numero es nuestra Base de Datos';
     }
   }
 
 
+
+
+  
   constructor() { }
 
   ngOnInit(): void {
