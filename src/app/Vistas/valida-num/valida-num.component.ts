@@ -12,10 +12,10 @@ export class ValidaNumComponent implements OnInit {
   message: string="";
 
   extractAndCheck() {
-    const firstTwoDigits = this.inputText.substr(0, 2);
+    const primeroDosNumeros = this.inputText.substr(0, 2);
     
-    if (+firstTwoDigits < 100) {
-      this.message = 'Los dos primeros números son menores a 100.';
+    if (+primeroDosNumeros == 30 || +primeroDosNumeros==31 ||+primeroDosNumeros==40 ) {
+      this.message = 'TIGO';
     } else {
       this.message = 'Los dos primeros números son mayores o iguales a 100.';
     }
