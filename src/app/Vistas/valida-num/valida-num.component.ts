@@ -16,7 +16,7 @@ export class ValidaNumComponent implements OnInit {
     
     if (+primeroDosNumeros == 30 || +primeroDosNumeros==31 ||+primeroDosNumeros==40 ) {
       this.message = 'TIGO';
-    } else if(+primeroDosNumeros==41){
+    } else if(+primeroDosNumeros==41 || +primeroDosNumeros==42 ||+primeroDosNumeros==43){
       
       this.message = 'CLARO';
     }else{
