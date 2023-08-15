@@ -44,7 +44,9 @@ export class ValidaNumComponent implements OnInit {
     }
   }
 
-//cmabios primer parte auqi escribi algo
+//hola este comentarioe s para validar que aqui
+//estube
+//:YO
 
 
   
