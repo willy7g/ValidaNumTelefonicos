@@ -11,7 +11,10 @@ export class ValidaNumComponent implements OnInit {
   primerosCuatroDigitos: string = '';
   cuatroDigitosConver: number | null = null;
 
-  extractAndCheck() {
+
+
+
+  validaEmpresaNumero() {
     console.log('entro el metodo');
     //capturamos los primeros Dos y cuatro Digitos
     const primeroDosNumeros = this.inputText.substr(0, 2);
@@ -38,7 +41,6 @@ export class ValidaNumComponent implements OnInit {
       (this.cuatroDigitosConver >= 4900 && this.cuatroDigitosConver <= 4999) ||
       (this.cuatroDigitosConver >= 5000 && this.cuatroDigitosConver <= 5009) ||
       (this.cuatroDigitosConver >= 5030 && this.cuatroDigitosConver <= 5029) ||
-      (this.cuatroDigitosConver >= 4700 && this.cuatroDigitosConver <= 4772) ||
       (this.cuatroDigitosConver >= 5150 && this.cuatroDigitosConver <= 5199) ||
       (this.cuatroDigitosConver >= 5200 && this.cuatroDigitosConver <= 5209) ||
       (this.cuatroDigitosConver >= 5300 && this.cuatroDigitosConver <= 5309) ||
@@ -53,8 +55,10 @@ export class ValidaNumComponent implements OnInit {
       (this.cuatroDigitosConver >= 5900 && this.cuatroDigitosConver <= 5909) ||
       (this.cuatroDigitosConver >= 5918 && this.cuatroDigitosConver <= 5919) ||
       (this.cuatroDigitosConver >= 5990 && this.cuatroDigitosConver <= 5999)
+     
     ) {
       this.message = 'TIGO';
+      //this.limpiarCampo();
     } else if (
       this.cuatroDigitosConver == 3229 ||
       +primeroDosNumeros == 41 ||
@@ -90,16 +94,24 @@ export class ValidaNumComponent implements OnInit {
       (this.cuatroDigitosConver >= 5810 && this.cuatroDigitosConver <= 5818) ||
       (this.cuatroDigitosConver >= 5820 && this.cuatroDigitosConver <= 5879) ||
       (this.cuatroDigitosConver >= 5910 && this.cuatroDigitosConver <= 5914) ||
-      (this.cuatroDigitosConver >= 5920 && this.cuatroDigitosConver <= 5989) 
+      (this.cuatroDigitosConver >= 5920 && this.cuatroDigitosConver <= 5989) ||
+      (this.cuatroDigitosConver >= 4700 && this.cuatroDigitosConver <= 4772) 
 
     ) {
       this.message = 'CLARO';
+     // this.limpiarCampo();
     } else {
-      this.message = 'no encontramos tu numero es nuestra Base de Datos';
+      this.message = 'No encontramos tu numero es nuestra Base de Datos';
     }
+}
+  
+  
+limpiarCampo() {
+  this.inputText = '';
+  this.message='';
+}
 
-    
-  }
+
 
   constructor() {}
 

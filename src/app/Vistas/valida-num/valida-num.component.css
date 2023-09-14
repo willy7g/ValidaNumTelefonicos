@@ -11,14 +11,7 @@ body{
     background-attachment: fixed;
     width: 100%; height: 100vh;
 }
-.box{
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 94vh;
 
-}
 .container{
     width: 380px;
     display: flex;
@@ -70,4 +63,24 @@ span{
 h1{
     padding: 25px;
 text-align: center;
+}
+
+
+.titulo {
+   color: white; /* Color de texto blanco */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 90px; /* Espacio de relleno alrededor del título */
+}
+
+
+/* Clase para centrar elementos horizontalmente */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Clase para aplicar bordes redondeados */
+.rounded {
+    border-radius: 10px; /* Ajusta el valor según tu preferencia */
 }
